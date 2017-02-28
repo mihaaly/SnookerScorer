@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="tableGreen">#00871B</color>
+    <color name="darkerTableGreen">#9000871B</color>
+    <color name="red">#D50000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#388E3c</color>
+    <color name="brown">#996633</color>
+    <color name="blue">#2962FF</color>
+    <color name="pink">#F50057</color>
+    <color name="colorPlayer1">@android:color/holo_red_light</color>
+    <color name="colorPlayer2">@android:color/holo_blue_light</color>
+    <color name="colorPlayer1Background">#90FD4444</color>
+    <color name="colorPlayer1BackgroundB">#90CB0001</color>
+</resources>

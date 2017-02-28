@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SnookerScorer</string>
+    <string name="stringPlayerOne">Type name here</string>
+    <string name="stringPlayerTwo">Type name here</string>
+    <string name="stringNextPlayer">Next Player</string>
+    <string name="stringNewFrame">New Frame</string>
+    <string name="stringNewGame">New Game</string>
+    <string name="stringUndo">Undo</string>
+
+</resources>

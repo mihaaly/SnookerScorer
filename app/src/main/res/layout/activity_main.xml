@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/greenfelt19201080"
+    tools:context="com.example.android.snookerscorer.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/viewScores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_1point_red"/>
+        <ImageView
+            android:id="@+id/dot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_1point_red"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_margin="16dp"
+            android:background="@drawable/score_counter_background">
+
+            <TextView
+                android:id="@+id/textViewScorePlayer1"
+                android:textColor="@color/colorPlayer1"
+                style="@style/styleScorePlayer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="147" />
+
+            <TextView
+                android:id="@+id/textViewFrameScorePlayer1"
+                style="@style/styleFrameScorePlayer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewScorePlayer1"
+                android:layout_centerHorizontal="true"
+                android:text="(0)" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            android:background="@drawable/score_counter_background">
+
+            <TextView
+                android:id="@+id/textViewScorePlayer2"
+                android:textColor="@color/colorPlayer2"
+                style="@style/styleScorePlayer1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="147" />
+
+            <TextView
+                android:id="@+id/textViewFrameScorePlayer2"
+                style="@style/styleFrameScorePlayer1.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewScorePlayer2"
+                android:layout_centerHorizontal="true"
+                android:text="(0)" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@android:color/black">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextNamePlayer1"
+                style="@style/stylePlayerNameOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/editTextNamePlayer2"
+                style="@style/stylePlayerNameOne.Two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/buttonNextPlayer"
+            style="@style/styleBigButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/stringNextPlayer"
+            android:background="@drawable/button_selector_next_player"
+            android:onClick="nextPlayer"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/breach16"
+            android:layout_marginRight="@dimen/breach16"
+            android:layout_marginTop="@dimen/breach16"
+            android:layout_marginBottom="@dimen/breach8"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/button1Point"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_background_1point_red"/>
+            <ImageButton
+                android:id="@+id/button2Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button1Point" />
+            <ImageButton
+                android:id="@+id/button3Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button1Point"
+                android:layout_toRightOf="@id/button2Points"/>
+            <ImageButton
+                android:id="@+id/button4Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button1Point"
+                android:layout_toRightOf="@id/button3Points"/>
+            <ImageButton
+                android:id="@+id/button5Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button1Point"
+                android:layout_toRightOf="@id/button4Points"/>
+            <ImageButton
+                android:id="@+id/button6Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button1Point"
+                android:layout_toRightOf="@id/button5Points"/>
+            <ImageButton
+                android:id="@+id/button7Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/button1Point"
+                android:layout_toRightOf="@id/button6Points"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/breach16"
+            android:layout_marginLeft="@dimen/breach16"
+            android:layout_marginRight="@dimen/breach16"
+            android:layout_marginTop="@dimen/breach8"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/buttonFoul4Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+            <ImageButton
+                android:id="@+id/buttonFoul5Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@id/buttonFoul4Points"/>
+            <ImageButton
+                android:id="@+id/buttonFoul6Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@id/buttonFoul5Points"/>
+            <ImageButton
+                android:id="@+id/buttonFoul7Points"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@id/buttonFoul6Points"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/dividerHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/breach16">
+            <Button
+                android:id="@+id/buttonNewFrame"
+                style="@style/styleMenuButtons"
+                android:layout_width="96dp"
+                android:layout_height="56dp"
+                android:text="@string/stringNewFrame"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_selector_next_player"/>
+            <Button
+                android:id="@+id/buttonNewGame"
+                style="@style/styleMenuButtons"
+                android:layout_width="96dp"
+                android:layout_height="56dp"
+                android:text="@string/stringNewGame"
+                android:background="@drawable/button_selector_next_player"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/buttonNewFrame"/>
+            <Button
+                android:id="@+id/buttonUndo"
+                style="@style/styleMenuButtons"
+                android:layout_width="96dp"
+                android:layout_height="56dp"
+                android:text="@string/stringUndo"
+                android:background="@drawable/button_selector_next_player"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/buttonNewGame"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
