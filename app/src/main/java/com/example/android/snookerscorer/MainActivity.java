@@ -18,18 +18,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextPlayer(View v) {
-        ImageView dot = (ImageView) findViewById(R.id.dot);
-        ImageView dot2 = (ImageView) findViewById(R.id.dot2);
+        ImageView activePlayer1 = (ImageView) findViewById(R.id.activePlayer1);
+        ImageView activePlayer2 = (ImageView) findViewById(R.id.activePlayer2);
         if (player == 1) {
-            dot.setVisibility(View.INVISIBLE);
-            dot2.setVisibility(View.VISIBLE);
+            activePlayer1.setVisibility(View.INVISIBLE);
+            activePlayer2.setVisibility(View.VISIBLE);
             player = 2;
         } else {
-            dot2.setVisibility(View.INVISIBLE);
-            dot.setVisibility(View.VISIBLE);
+            activePlayer2.setVisibility(View.INVISIBLE);
+            activePlayer1.setVisibility(View.VISIBLE);
             player = 1;
         }
-        
+
     }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,30 +9,19 @@
     android:background="@drawable/greenfelt19201080"
     tools:context="com.example.android.snookerscorer.MainActivity">
 
+
+
     <LinearLayout
         android:id="@+id/viewScores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/dot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:src="@drawable/ic_1point_red"/>
-        <ImageView
-            android:id="@+id/dot2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:src="@drawable/ic_1point_red"/>
-
         <RelativeLayout
+            style="@style/styleScoreViewPlayer1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:layout_margin="16dp"
             android:background="@drawable/score_counter_background">
 
             <TextView
@@ -53,16 +42,14 @@
                 android:layout_centerHorizontal="true"
                 android:text="(0)" />
 
-
-
         </RelativeLayout>
 
         <RelativeLayout
+            style="@style/styleScoreViewPlayer1.2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:orientation="vertical"
-            android:layout_margin="16dp"
             android:background="@drawable/score_counter_background">
 
             <TextView
@@ -84,6 +71,28 @@
                 android:text="(0)" />
 
         </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/activePlayer1"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/bowtieplayer1"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:id="@+id/activePlayer2"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/bowtieplayer2"
+            android:scaleType="fitCenter"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -129,14 +138,16 @@
 
 
 
-        <RelativeLayout
+        <com.google.android.flexbox.FlexboxLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/breach16"
             android:layout_marginRight="@dimen/breach16"
             android:layout_marginTop="@dimen/breach16"
             android:layout_marginBottom="@dimen/breach8"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            app:flexWrap="wrap"
+            app:justifyContent="center">
 
             <ImageButton
                 android:id="@+id/button1Point"
@@ -180,7 +191,7 @@
                 android:layout_below="@id/button1Point"
                 android:layout_toRightOf="@id/button6Points"/>
 
-        </RelativeLayout>
+        </com.google.android.flexbox.FlexboxLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -212,11 +223,6 @@
                 android:layout_toRightOf="@id/buttonFoul6Points"/>
 
         </RelativeLayout>
-
-        <View
-            style="@style/dividerHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"

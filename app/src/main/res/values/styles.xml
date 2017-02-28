@@ -51,6 +51,18 @@
         <item name="android:textColor">@color/colorPlayer2</item>
     </style>
 
+    <style name="styleScoreViewPlayer1">
+        <item name="android:layout_marginTop">@dimen/breach16</item>
+        <item name="android:layout_marginBottom">@dimen/breach4</item>
+        <item name="android:layout_marginLeft">@dimen/breach16</item>
+        <item name="android:layout_marginRight">@dimen/breach8</item>
+    </style>
+
+    <style name="styleScoreViewPlayer1.2">
+        <item name="android:layout_marginLeft">@dimen/breach8</item>
+        <item name="android:layout_marginRight">@dimen/breach16</item>
+    </style>
+
     <style name="styleBigButton">
         <item name="android:layout_marginLeft">@dimen/breach16</item>
         <item name="android:layout_marginRight">@dimen/breach16</item>
