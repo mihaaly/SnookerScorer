@@ -1,10 +1,16 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- text size related dimensions -->
     <dimen name="dimenTextSizePlayerName">16sp</dimen>
-    <dimen name="dimenTextSizeScore">56sp</dimen>
-    <dimen name="dimenTextSizeFrameScore">20sp</dimen>
+    <dimen name="dimenTextSizeScore">40sp</dimen>
+    <dimen name="dimenTextSizeFrameScore">14sp</dimen>
+    <dimen name="dimenTextSizePointButtons">16sp</dimen>
+
+
+    <!-- margin-, padding related dimensions -->
     <dimen name="breach4">4dp</dimen>
     <dimen name="breach8">8dp</dimen>
     <dimen name="breach16">16dp</dimen>
-    <dimen name="radiusCorner">5dp</dimen>
+
 </resources>

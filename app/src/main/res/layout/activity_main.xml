@@ -9,7 +9,31 @@
     android:background="@drawable/greenfelt19201080"
     tools:context="com.example.android.snookerscorer.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
 
+        android:layout_marginTop="@dimen/breach16">
+
+        <EditText
+            android:id="@+id/editTextNamePlayer1"
+            style="@style/stylePlayerNameOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/score_counter_background"            />
+
+        <EditText
+            android:id="@+id/editTextNamePlayer2"
+            style="@style/stylePlayerNameOne.Two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/score_counter_background"            />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/viewScores"
@@ -75,7 +99,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/breach4">
 
         <ImageView
             android:id="@+id/activePlayer1"
@@ -99,33 +124,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
+        android:paddingTop="@dimen/breach8"
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:background="@android:color/black">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextNamePlayer1"
-                style="@style/stylePlayerNameOne"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/editTextNamePlayer2"
-                style="@style/stylePlayerNameOne.Two"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-
-        </LinearLayout>
-
 
         <Button
             android:id="@+id/buttonNextPlayer"
@@ -139,124 +141,136 @@
 
 
         <com.google.android.flexbox.FlexboxLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/breach16"
             android:layout_marginRight="@dimen/breach16"
-            android:layout_marginTop="@dimen/breach16"
-            android:layout_marginBottom="@dimen/breach8"
+            android:layout_marginTop="@dimen/breach4"
+            android:layout_marginBottom="@dimen/breach4"
             android:gravity="center_horizontal"
             app:flexWrap="wrap"
             app:justifyContent="center">
 
-            <ImageButton
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button1Point"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/button_background_1point_red"/>
-            <ImageButton
+                android:background="@drawable/button_selector_1point_red"
+                android:text="+1"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button2Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_below="@id/button1Point" />
-            <ImageButton
+                android:layout_below="@id/button1Point"
+                android:background="@drawable/button_selector_2points_yellow"
+                android:text="+2"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button3Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
                 android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button2Points"/>
-            <ImageButton
+                android:layout_toRightOf="@id/button2Points"
+                android:background="@drawable/button_selector_3points_green"
+                android:text="+3"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button4Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
                 android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button3Points"/>
-            <ImageButton
+                android:layout_toRightOf="@id/button3Points"
+                android:background="@drawable/button_selector_4points_brown"
+                android:text="+4"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button5Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
                 android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button4Points"/>
-            <ImageButton
+                android:layout_toRightOf="@id/button4Points"
+                android:background="@drawable/button_selector_5points_blue"
+                android:text="+5"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button6Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
                 android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button5Points"/>
-            <ImageButton
+                android:layout_toRightOf="@id/button5Points"
+                android:background="@drawable/button_selector_6points_pink"
+                android:text="+6"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/button7Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
                 android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button6Points"/>
+                android:layout_toRightOf="@id/button6Points"
+                android:background="@drawable/button_selector_black"
+                android:text="+7"/>
 
         </com.google.android.flexbox.FlexboxLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/breach16"
+            android:layout_marginBottom="@dimen/breach4"
             android:layout_marginLeft="@dimen/breach16"
             android:layout_marginRight="@dimen/breach16"
-            android:layout_marginTop="@dimen/breach8"
+            android:layout_marginTop="@dimen/breach4"
             android:gravity="center_horizontal">
 
-            <ImageButton
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/buttonFoul4Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp" />
-            <ImageButton
+                android:background="@drawable/button_selector_black"
+                android:text="-4"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/buttonFoul5Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_toRightOf="@id/buttonFoul4Points"/>
-            <ImageButton
+                android:layout_toRightOf="@id/buttonFoul4Points"
+                android:background="@drawable/button_selector_black"
+                android:text="-5"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/buttonFoul6Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_toRightOf="@id/buttonFoul5Points"/>
-            <ImageButton
+                android:layout_toRightOf="@id/buttonFoul5Points"
+                android:background="@drawable/button_selector_black"
+                android:text="-6"/>
+            <Button
+                style="@style/stylePointButtons"
                 android:id="@+id/buttonFoul7Points"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_toRightOf="@id/buttonFoul6Points"/>
+                android:layout_toRightOf="@id/buttonFoul6Points"
+                android:background="@drawable/button_selector_black"
+                android:text="-7"/>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/breach16">
+            android:gravity="center_horizontal">
+
             <Button
                 android:id="@+id/buttonNewFrame"
                 style="@style/styleMenuButtons"
                 android:layout_width="96dp"
-                android:layout_height="56dp"
-                android:text="@string/stringNewFrame"
+                android:layout_height="48dp"
                 android:layout_alignParentBottom="true"
-                android:background="@drawable/button_selector_next_player"/>
+                android:background="@drawable/button_selector_next_player"
+                android:text="@string/stringNewFrame" />
+
             <Button
                 android:id="@+id/buttonNewGame"
                 style="@style/styleMenuButtons"
                 android:layout_width="96dp"
-                android:layout_height="56dp"
-                android:text="@string/stringNewGame"
-                android:background="@drawable/button_selector_next_player"
+                android:layout_height="48dp"
                 android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@id/buttonNewFrame"/>
+                android:layout_toRightOf="@id/buttonNewFrame"
+                android:background="@drawable/button_selector_next_player"
+                android:text="@string/stringNewGame" />
+
             <Button
                 android:id="@+id/buttonUndo"
                 style="@style/styleMenuButtons"
                 android:layout_width="96dp"
-                android:layout_height="56dp"
-                android:text="@string/stringUndo"
-                android:background="@drawable/button_selector_next_player"
+                android:layout_height="48dp"
                 android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@id/buttonNewGame"/>
+                android:layout_toRightOf="@id/buttonNewGame"
+                android:background="@drawable/button_selector_next_player"
+                android:text="@string/stringUndo" />
         </RelativeLayout>
 
     </LinearLayout>
 
-    </LinearLayout>
+</LinearLayout>

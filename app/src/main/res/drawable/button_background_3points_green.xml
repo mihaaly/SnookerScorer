@@ -6,7 +6,7 @@
         </shape>
     </item>
     <item
-        android:drawable="@drawable/ic_1point_red"
+        android:drawable="@drawable/ic_3points_green"
         android:top="1dp"
         android:bottom="1dp"
         android:left="1dp"

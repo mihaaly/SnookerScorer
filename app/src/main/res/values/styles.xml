@@ -8,38 +8,40 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+    <!-- Player related style -->
     <style name="stylePlayerNameOne">
         <item name="android:textColor">@color/colorPlayer1</item>
         <item name="android:maxLines">1</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textSize">@dimen/dimenTextSizePlayerName</item>
-        <item name="android:paddingTop">@dimen/breach8</item>
-        <item name="android:paddingBottom">@dimen/breach4</item>
-        <item name="android:paddingLeft">@dimen/breach16</item>
-        <item name="android:paddingRight">@dimen/breach8</item>
         <item name="android:hint">@string/stringPlayerOne</item>
         <item name="android:textColorHint">@color/colorPlayer1</item>
+        <item name="android:layout_marginRight">@dimen/breach8</item>
+        <item name="android:layout_marginLeft">@dimen/breach16</item>
+        <item name="android:padding">@dimen/breach8</item>
     </style>
 
     <style name="stylePlayerNameOne.Two">
         <item name="android:textColor">@color/colorPlayer2</item>
-        <item name="android:paddingLeft">@dimen/breach8</item>
-        <item name="android:paddingRight">@dimen/breach16</item>
         <item name="android:textColorHint">@color/colorPlayer2</item>
         <item name="android:hint">@string/stringPlayerTwo</item>
+        <item name="android:layout_marginRight">@dimen/breach16</item>
+        <item name="android:layout_marginLeft">@dimen/breach8</item>
     </style>
 
     <style name="styleScorePlayer1">
         <item name="android:textColor">@color/colorPlayer1</item>
         <item name="android:textSize">@dimen/dimenTextSizeScore</item>
-        <item name="android:padding">@dimen/breach8</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/breach4</item>
     </style>
 
     <style name="styleScorePlayer1.2">
         <item name="android:textColor">@color/colorPlayer2</item>
     </style>
-
 
     <style name="styleFrameScorePlayer1">
         <item name="android:textColor">@color/colorPlayer1</item>
@@ -63,10 +65,13 @@
         <item name="android:layout_marginRight">@dimen/breach16</item>
     </style>
 
+
+
+    <!-- button related style -->
     <style name="styleBigButton">
         <item name="android:layout_marginLeft">@dimen/breach16</item>
         <item name="android:layout_marginRight">@dimen/breach16</item>
-        <item name="android:layout_marginTop">@dimen/breach4</item>
+        <item name="android:layout_marginTop">@dimen/breach8</item>
         <item name="android:layout_marginBottom">@dimen/breach4</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
@@ -75,10 +80,15 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="dividerHorizontal">
-        <item name="android:background">@android:color/darker_gray</item>
-        <item name="android:layout_marginLeft">@dimen/breach16</item>
-        <item name="android:layout_marginRight">@dimen/breach16</item>
+    <style name="stylePointButtons">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_margin">@dimen/breach8</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/dimenTextSizePointButtons</item>
+        <item name="android:textStyle">bold</item>
     </style>
+
+
 
 </resources>
