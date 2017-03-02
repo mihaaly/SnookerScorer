@@ -2,6 +2,8 @@ package com.example.android.snookerscorer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -61,7 +63,45 @@ public class MainActivity extends AppCompatActivity {
         textViewFrameScorePlayer2 = (TextView) findViewById(R.id.textViewFrameScorePlayer2);
         editTextNamePlayer1 = (EditText) findViewById(R.id.editTextNamePlayer1);
         editTextNamePlayer2 = (EditText) findViewById(R.id.editTextNamePlayer2);
-        
+
+        editTextNamePlayer1.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Add your code here
+                mNamePlayer1 = editTextNamePlayer1.getEditableText().toString();
+            }
+        });
+
+        editTextNamePlayer2.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Add your code here
+                mNamePlayer2 = editTextNamePlayer2.getEditableText().toString();
+            }
+        });
+
     }
 
 
@@ -69,8 +109,6 @@ public class MainActivity extends AppCompatActivity {
      * Alternates bow tie visibility and int player value (1 or 2).
      */
     public void nextPlayer(View view) {
-        mNamePlayer1 = editTextNamePlayer1.getEditableText().toString();
-        mNamePlayer2 = editTextNamePlayer2.getEditableText().toString();
         if (mPlayer == 1) {
             activePlayer1.setVisibility(View.INVISIBLE);
             activePlayer2.setVisibility(View.VISIBLE);
