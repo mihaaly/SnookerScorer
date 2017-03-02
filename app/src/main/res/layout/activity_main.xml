@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/score_counter_background"/>
+            android:background="@drawable/score_counter_background" />
 
         <EditText
             android:id="@+id/editTextNamePlayer2"
@@ -154,51 +154,51 @@
                 android:id="@+id/button1Point"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_1point_red"
-                android:text="+1"
-                android:onClick="add1point"/>
+                android:onClick="add1point"
+                android:text="+1" />
 
             <Button
                 android:id="@+id/button2Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_2points_yellow"
-                android:text="+2"
-                android:onClick="add2points"/>
+                android:onClick="add2points"
+                android:text="+2" />
 
             <Button
                 android:id="@+id/button3Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_3points_green"
-                android:text="+3"
-                android:onClick="add3points"/>
+                android:onClick="add3points"
+                android:text="+3" />
 
             <Button
                 android:id="@+id/button4Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_4points_brown"
-                android:text="+4"
-                android:onClick="add4points"/>
+                android:onClick="add4points"
+                android:text="+4" />
 
 
             <Button
                 android:id="@+id/button5Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_5points_blue"
-                android:text="+5"
-                android:onClick="add5points"/>
+                android:onClick="add5points"
+                android:text="+5" />
 
             <Button
                 android:id="@+id/button6Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_6points_pink"
-                android:text="+6"
-                android:onClick="add6points"/>
+                android:onClick="add6points"
+                android:text="+6" />
 
             <Button
                 android:id="@+id/button7Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_black"
-                android:text="+7"
-                android:onClick="add7points"/>
+                android:onClick="add7points"
+                android:text="+7" />
 
         </com.google.android.flexbox.FlexboxLayout>
 
@@ -216,32 +216,32 @@
                 android:id="@+id/buttonFoul4Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_black"
-                android:text="-4"
-                android:onClick="subtract4points"/>
+                android:onClick="subtract4points"
+                android:text="-4" />
 
             <Button
                 android:id="@+id/buttonFoul5Points"
                 style="@style/stylePointButtons"
                 android:layout_toRightOf="@id/buttonFoul4Points"
                 android:background="@drawable/button_selector_black"
-                android:text="-5"
-                android:onClick="subtract5points"/>
+                android:onClick="subtract5points"
+                android:text="-5" />
 
             <Button
                 android:id="@+id/buttonFoul6Points"
                 style="@style/stylePointButtons"
                 android:layout_toRightOf="@id/buttonFoul5Points"
                 android:background="@drawable/button_selector_black"
-                android:text="-6"
-                android:onClick="subtract6points"/>
+                android:onClick="subtract6points"
+                android:text="-6" />
 
             <Button
                 android:id="@+id/buttonFoul7Points"
                 style="@style/stylePointButtons"
                 android:layout_toRightOf="@id/buttonFoul6Points"
                 android:background="@drawable/button_selector_black"
-                android:text="-7"
-                android:onClick="subtract7points"/>
+                android:onClick="subtract7points"
+                android:text="-7" />
 
         </RelativeLayout>
 
@@ -256,31 +256,31 @@
                 android:id="@+id/buttonNewFrame"
                 style="@style/styleMenuButtons"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/button_selector_next_player"
-                android:text="@string/stringNewFrame"
-                android:onClick="newFrame"/>
+                android:onClick="newFrame"
+                android:text="@string/stringNewFrame" />
 
             <Button
                 android:id="@+id/buttonNewGame"
                 style="@style/styleMenuButtons"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/button_selector_next_player"
-                android:text="@string/stringNewGame"
-                android:onClick="newGame"/>
+                android:onClick="newGame"
+                android:text="@string/stringNewGame" />
 
             <Button
                 android:id="@+id/buttonUndo"
                 style="@style/styleMenuButtons"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="48dp"
+                android:layout_weight="1"
                 android:background="@drawable/button_selector_next_player"
-                android:text="@string/stringUndo"
-                android:onClick="undo"/>
+                android:onClick="undo"
+                android:text="@string/stringUndo" />
         </LinearLayout>
 
     </RelativeLayout>

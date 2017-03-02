@@ -9,7 +9,6 @@
     </style>
 
 
-
     <!-- Player related style -->
     <style name="stylePlayerNameOne">
         <item name="android:textColor">@color/colorPlayer1</item>
@@ -66,7 +65,6 @@
     </style>
 
 
-
     <!-- button related style -->
     <style name="styleBigButton">
         <item name="android:layout_marginLeft">@dimen/breach16</item>
@@ -88,7 +86,6 @@
         <item name="android:textSize">@dimen/dimenTextSizePointButtons</item>
         <item name="android:textStyle">bold</item>
     </style>
-
 
 
 </resources>

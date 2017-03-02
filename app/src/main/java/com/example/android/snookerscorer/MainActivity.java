@@ -34,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
     String mNamePlayer2 = " Player 2";
 
 
-
     /**
      * Views declared to avoid using findViewById every time.
-     *
      */
     private ImageView activePlayer1;
     private ImageView activePlayer2;
@@ -47,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewFrameScorePlayer2;
     private EditText editTextNamePlayer1;
     private EditText editTextNamePlayer2;
-
 
 
     @Override
@@ -293,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void subtract4points(View view) {
         mBallType = 2;
-        if (mPlayer == 1 ) {
+        if (mPlayer == 1) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 4;
             displayScorePlayer2(mScorePlayer2);
@@ -316,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void subtract5points(View view) {
         mBallType = 2;
-        if (mPlayer == 1 ) {
+        if (mPlayer == 1) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 5;
             displayScorePlayer2(mScorePlayer2);
@@ -339,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void subtract6points(View view) {
         mBallType = 2;
-        if (mPlayer == 1 ) {
+        if (mPlayer == 1) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 6;
             displayScorePlayer2(mScorePlayer2);
@@ -362,7 +359,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void subtract7points(View view) {
         mBallType = 2;
-        if (mPlayer == 1 ) {
+        if (mPlayer == 1) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 7;
             displayScorePlayer2(mScorePlayer2);
@@ -383,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Resets scores and frame scores for a new game + textual feedback.
      */
-    public void newGame (View view) {
+    public void newGame(View view) {
         mPlayer = 0;
         mScorePlayer1 = 0;
         mScorePlayer2 = 0;
@@ -406,13 +403,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Resets only scores and adds 1 point to the winner's frame counter + textual feedback.
      */
-    public void newFrame (View view) {
+    public void newFrame(View view) {
         if (mScorePlayer1 < mScorePlayer2) {
             mFramePlayer2 = mFramePlayer2 + 1;
             displayFrameScorePlayer2(mFramePlayer2);
         }
         if (mScorePlayer1 > mScorePlayer2) {
-            mFramePlayer1 = mFramePlayer1 +1;
+            mFramePlayer1 = mFramePlayer1 + 1;
             displayFrameScorePlayer1(mFramePlayer1);
         }
         mPlayer = 0;
@@ -463,7 +460,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void undo(View view) {
         if (mPlayer == 1) {
-            if (mBallType == 1){
+            if (mBallType == 1) {
                 mScorePlayer1 = mTempPlayer1;
                 displayScorePlayer1(mScorePlayer1);
             }
