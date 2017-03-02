@@ -120,13 +120,11 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:background="@android:color/black"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
         android:paddingTop="@dimen/breach8">
 
         <Button
@@ -134,26 +132,27 @@
             style="@style/styleBigButton"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_alignParentTop="true"
             android:background="@drawable/button_selector_next_player"
             android:onClick="nextPlayer"
             android:text="@string/stringNextPlayer" />
 
 
         <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/groupViewPointButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/buttonNextPlayer"
             android:layout_marginBottom="@dimen/breach4"
             android:layout_marginLeft="@dimen/breach16"
             android:layout_marginRight="@dimen/breach16"
             android:layout_marginTop="@dimen/breach4"
-            android:gravity="center_horizontal"
             app:flexWrap="wrap"
             app:justifyContent="center">
 
             <Button
                 android:id="@+id/button1Point"
                 style="@style/stylePointButtons"
-                android:layout_centerHorizontal="true"
                 android:background="@drawable/button_selector_1point_red"
                 android:text="+1"
                 android:onClick="add1point"/>
@@ -161,7 +160,6 @@
             <Button
                 android:id="@+id/button2Points"
                 style="@style/stylePointButtons"
-                android:layout_below="@id/button1Point"
                 android:background="@drawable/button_selector_2points_yellow"
                 android:text="+2"
                 android:onClick="add2points"/>
@@ -169,8 +167,6 @@
             <Button
                 android:id="@+id/button3Points"
                 style="@style/stylePointButtons"
-                android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button2Points"
                 android:background="@drawable/button_selector_3points_green"
                 android:text="+3"
                 android:onClick="add3points"/>
@@ -178,8 +174,6 @@
             <Button
                 android:id="@+id/button4Points"
                 style="@style/stylePointButtons"
-                android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button3Points"
                 android:background="@drawable/button_selector_4points_brown"
                 android:text="+4"
                 android:onClick="add4points"/>
@@ -188,8 +182,6 @@
             <Button
                 android:id="@+id/button5Points"
                 style="@style/stylePointButtons"
-                android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button4Points"
                 android:background="@drawable/button_selector_5points_blue"
                 android:text="+5"
                 android:onClick="add5points"/>
@@ -197,8 +189,6 @@
             <Button
                 android:id="@+id/button6Points"
                 style="@style/stylePointButtons"
-                android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button5Points"
                 android:background="@drawable/button_selector_6points_pink"
                 android:text="+6"
                 android:onClick="add6points"/>
@@ -206,8 +196,6 @@
             <Button
                 android:id="@+id/button7Points"
                 style="@style/stylePointButtons"
-                android:layout_below="@id/button1Point"
-                android:layout_toRightOf="@id/button6Points"
                 android:background="@drawable/button_selector_black"
                 android:text="+7"
                 android:onClick="add7points"/>
@@ -217,6 +205,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/groupViewPointButtons"
             android:layout_marginBottom="@dimen/breach4"
             android:layout_marginLeft="@dimen/breach16"
             android:layout_marginRight="@dimen/breach16"
@@ -256,17 +245,19 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/breach16"
+            android:layout_marginRight="@dimen/breach16">
 
             <Button
                 android:id="@+id/buttonNewFrame"
                 style="@style/styleMenuButtons"
-                android:layout_width="96dp"
-                android:layout_height="48dp"
-                android:layout_alignParentBottom="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/button_selector_next_player"
                 android:text="@string/stringNewFrame"
                 android:onClick="newFrame"/>
@@ -274,10 +265,9 @@
             <Button
                 android:id="@+id/buttonNewGame"
                 style="@style/styleMenuButtons"
-                android:layout_width="96dp"
-                android:layout_height="48dp"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@id/buttonNewFrame"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/button_selector_next_player"
                 android:text="@string/stringNewGame"
                 android:onClick="newGame"/>
@@ -285,15 +275,14 @@
             <Button
                 android:id="@+id/buttonUndo"
                 style="@style/styleMenuButtons"
-                android:layout_width="96dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="48dp"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@id/buttonNewGame"
                 android:background="@drawable/button_selector_next_player"
                 android:text="@string/stringUndo"
                 android:onClick="undo"/>
-        </RelativeLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

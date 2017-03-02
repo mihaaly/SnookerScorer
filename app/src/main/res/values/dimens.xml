@@ -13,4 +13,7 @@
     <dimen name="breach8">8dp</dimen>
     <dimen name="breach16">16dp</dimen>
 
+    <!-- touch zone related dimensions -->
+    <dimen name="dimenTouchPointButtons">56dp</dimen>
+
 </resources>

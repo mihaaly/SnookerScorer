@@ -22,12 +22,16 @@ public class MainActivity extends AppCompatActivity {
     // Frame score counting variables.
     int mFramePlayer1 = 0;
     int mFramePlayer2 = 0;
-    // Temporary variables for undo action.
+    // Temporary variables for undo actions.
     int mTempPlayer1 = 0;
     int mTempPlayer2 = 0;
+    // Variable for keeping track of ball type: 1: adds points 2: "subtracts" (foul balls)
+    int mBallType = 0;
     // String variables holding players' names.
     String mNamePlayer1 = " Player 1";
     String mNamePlayer2 = " Player 2";
+
+
 
     /**
      * Views declared to avoid using findViewById every time.
@@ -43,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextNamePlayer2;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,28 +61,30 @@ public class MainActivity extends AppCompatActivity {
         textViewFrameScorePlayer2 = (TextView) findViewById(R.id.textViewFrameScorePlayer2);
         editTextNamePlayer1 = (EditText) findViewById(R.id.editTextNamePlayer1);
         editTextNamePlayer2 = (EditText) findViewById(R.id.editTextNamePlayer2);
-
-
     }
-
-
 
 
     /**
      * Alternates bow tie visibility and int player value (1 or 2).
      */
     public void nextPlayer(View view) {
+        mNamePlayer1 = editTextNamePlayer1.getEditableText().toString();
+        mNamePlayer2 = editTextNamePlayer2.getEditableText().toString();
         if (mPlayer == 1) {
             activePlayer1.setVisibility(View.INVISIBLE);
             activePlayer2.setVisibility(View.VISIBLE);
             mPlayer = 2;
+            Toast.makeText(getApplicationContext(),
+                    mNamePlayer2 + "'s turn",
+                    Toast.LENGTH_SHORT).show();
         } else {
             activePlayer2.setVisibility(View.INVISIBLE);
             activePlayer1.setVisibility(View.VISIBLE);
             mPlayer = 1;
+            Toast.makeText(getApplicationContext(),
+                    mNamePlayer1 + "'s turn",
+                    Toast.LENGTH_SHORT).show();
         }
-        mNamePlayer1 = editTextNamePlayer1.getEditableText().toString();
-        mNamePlayer2 = editTextNamePlayer2.getEditableText().toString();
 
     }
 
@@ -85,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 1 point to the current player and updates score counter display + textual feedback.
      */
     public void add1point(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 1;
@@ -107,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 2 points to the current player and updates score counter display + textual feedback.
      */
     public void add2points(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 2;
@@ -129,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 3 points to the current player and updates score counter display + textual feedback.
      */
     public void add3points(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 3;
@@ -151,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 4 points to the current player and updates score counter display + textual feedback.
      */
     public void add4points(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 4;
@@ -173,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 5 points to the current player and updates score counter display + textual feedback.
      */
     public void add5points(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 5;
@@ -195,6 +207,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 6 points to the current player and updates score counter display + textual feedback.
      */
     public void add6points(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 6;
@@ -217,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 7 points to the current player and updates score counter display + textual feedback.
      */
     public void add7points(View view) {
+        mBallType = 1;
         if (mPlayer == 1) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 7;
@@ -239,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 4 points to the adversary's score and updates score counter display + textual feedback.
      */
     public void subtract4points(View view) {
+        mBallType = 2;
         if (mPlayer == 1 ) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 4;
@@ -261,7 +276,9 @@ public class MainActivity extends AppCompatActivity {
      * Adds 5 points to the adversary's score and updates score counter display + textual feedback.
      */
     public void subtract5points(View view) {
+        mBallType = 2;
         if (mPlayer == 1 ) {
+            mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 5;
             displayScorePlayer2(mScorePlayer2);
             Toast.makeText(getApplicationContext(),
@@ -269,6 +286,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
         if (mPlayer == 2) {
+            mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 5;
             displayScorePlayer1(mScorePlayer1);
             Toast.makeText(getApplicationContext(),
@@ -281,7 +299,9 @@ public class MainActivity extends AppCompatActivity {
      * Adds 6 points to the adversary's score and updates score counter display + textual feedback.
      */
     public void subtract6points(View view) {
+        mBallType = 2;
         if (mPlayer == 1 ) {
+            mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 6;
             displayScorePlayer2(mScorePlayer2);
             Toast.makeText(getApplicationContext(),
@@ -289,6 +309,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
         if (mPlayer == 2) {
+            mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 6;
             displayScorePlayer1(mScorePlayer1);
             Toast.makeText(getApplicationContext(),
@@ -301,7 +322,9 @@ public class MainActivity extends AppCompatActivity {
      * Adds 7 points to the adversary's score and updates score counter display + textual feedback.
      */
     public void subtract7points(View view) {
+        mBallType = 2;
         if (mPlayer == 1 ) {
+            mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 7;
             displayScorePlayer2(mScorePlayer2);
             Toast.makeText(getApplicationContext(),
@@ -309,6 +332,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
         if (mPlayer == 2) {
+            mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 7;
             displayScorePlayer1(mScorePlayer1);
             Toast.makeText(getApplicationContext(),
@@ -328,6 +352,7 @@ public class MainActivity extends AppCompatActivity {
         mFramePlayer2 = 0;
         mTempPlayer1 = 0;
         mTempPlayer2 = 0;
+        mBallType = 0;
         displayScorePlayer1(mScorePlayer1);
         displayScorePlayer2(mScorePlayer2);
         displayFrameScorePlayer1(mFramePlayer1);
@@ -356,6 +381,7 @@ public class MainActivity extends AppCompatActivity {
         mScorePlayer2 = 0;
         mTempPlayer1 = 0;
         mTempPlayer2 = 0;
+        mBallType = 0;
         displayScorePlayer1(mScorePlayer1);
         displayScorePlayer2(mScorePlayer2);
         activePlayer1.setVisibility(View.VISIBLE);
@@ -398,12 +424,24 @@ public class MainActivity extends AppCompatActivity {
      */
     public void undo(View view) {
         if (mPlayer == 1) {
-            mScorePlayer1 = mTempPlayer1;
-            displayScorePlayer1(mScorePlayer1);
+            if (mBallType == 1){
+                mScorePlayer1 = mTempPlayer1;
+                displayScorePlayer1(mScorePlayer1);
+            }
+            if (mBallType == 2) {
+                mScorePlayer2 = mTempPlayer2;
+                displayScorePlayer2(mScorePlayer2);
+            }
         }
         if (mPlayer == 2) {
-            mScorePlayer2 = mTempPlayer2;
-            displayScorePlayer2(mScorePlayer2);
+            if (mBallType == 1) {
+                mScorePlayer2 = mTempPlayer2;
+                displayScorePlayer2(mScorePlayer2);
+            }
+            if (mBallType == 2) {
+                mScorePlayer1 = mTempPlayer1;
+                displayScorePlayer1(mScorePlayer1);
+            }
         }
         Toast.makeText(getApplicationContext(),
                 "UNDO",
