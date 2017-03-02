@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         textViewFrameScorePlayer2 = (TextView) findViewById(R.id.textViewFrameScorePlayer2);
         editTextNamePlayer1 = (EditText) findViewById(R.id.editTextNamePlayer1);
         editTextNamePlayer2 = (EditText) findViewById(R.id.editTextNamePlayer2);
+        
     }
 
 
