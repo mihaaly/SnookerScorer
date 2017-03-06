@@ -3,8 +3,17 @@
     <string name="stringPlayerOne">Type name here</string>
     <string name="stringPlayerTwo">Type name here</string>
     <string name="stringNextPlayer">Next Player</string>
+    <string name="stringTurn">\'s turn</string>
     <string name="stringNewFrame">New Frame</string>
     <string name="stringNewGame">New Game</string>
     <string name="stringUndo">Undo</string>
+    <string name="stringPlus1">+1 point for \u0020</string>
+    <string name="stringPlus2">+2 points for \u0020</string>
+    <string name="stringPlus3">+3 points for \u0020</string>
+    <string name="stringPlus4">+4 points for \u0020</string>
+    <string name="stringPlus5">+5 points for \u0020</string>
+    <string name="stringPlus6">+6 points for \u0020</string>
+    <string name="stringPlus7">+7 points for \u0020</string>
+
 
 </resources>

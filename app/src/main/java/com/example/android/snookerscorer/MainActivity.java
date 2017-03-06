@@ -110,16 +110,13 @@ public class MainActivity extends AppCompatActivity {
             activePlayer1.setVisibility(View.INVISIBLE);
             activePlayer2.setVisibility(View.VISIBLE);
             mPlayer = 2;
-            Toast.makeText(getApplicationContext(),
-                    mNamePlayer2 + "'s turn",
-                    Toast.LENGTH_SHORT).show();
+            showToast(mNamePlayer2 + (this.getString(R.string.stringTurn)));
+
         } else {
             activePlayer2.setVisibility(View.INVISIBLE);
             activePlayer1.setVisibility(View.VISIBLE);
             mPlayer = 1;
-            Toast.makeText(getApplicationContext(),
-                    mNamePlayer1 + "'s turn",
-                    Toast.LENGTH_SHORT).show();
+            showToast(mNamePlayer1 + (this.getString(R.string.stringTurn)));
         }
 
     }
@@ -133,17 +130,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 1;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+1 point for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus1) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 1;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+1 point for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus1) + mNamePlayer2);
         }
     }
 
@@ -156,17 +149,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 2;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+2 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus2) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 2;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+2 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus2) + mNamePlayer2);
         }
     }
 
@@ -179,17 +168,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 3;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+3 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus3) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 3;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+3 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus3) + mNamePlayer2);
         }
     }
 
@@ -202,17 +187,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 4;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+4 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus4) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 4;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+4 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus4) + mNamePlayer2);
         }
     }
 
@@ -225,17 +206,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 5;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+5 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus5) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 5;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+3 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus5) + mNamePlayer2);
         }
     }
 
@@ -248,17 +225,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 6;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+6 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus6) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 6;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+6 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus6) + mNamePlayer2);
         }
     }
 
@@ -271,17 +244,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 7;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+7 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus7) + mNamePlayer1);
         }
         if (mPlayer == 2) {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 7;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+7 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus7) + mNamePlayer2);
         }
     }
 
@@ -294,17 +263,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 4;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+4 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus4) + mNamePlayer2);
         }
         if (mPlayer == 2) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 4;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+4 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus4) + mNamePlayer1);
         }
     }
 
@@ -317,17 +282,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 5;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+5 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus5) + mNamePlayer2);
         }
         if (mPlayer == 2) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 5;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+5 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus5) + mNamePlayer1);
         }
     }
 
@@ -340,17 +301,13 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 6;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+6 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus6) + mNamePlayer2);
         }
         if (mPlayer == 2) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 6;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+6 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus6) + mNamePlayer1);
         }
     }
 
@@ -363,17 +320,14 @@ public class MainActivity extends AppCompatActivity {
             mTempPlayer2 = mScorePlayer2;
             mScorePlayer2 = mScorePlayer2 + 7;
             displayScorePlayer2(mScorePlayer2);
-            Toast.makeText(getApplicationContext(),
-                    "+7 points for " + mNamePlayer2,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus7) + mNamePlayer2);
         }
         if (mPlayer == 2) {
             mTempPlayer1 = mScorePlayer1;
             mScorePlayer1 = mScorePlayer1 + 7;
             displayScorePlayer1(mScorePlayer1);
-            Toast.makeText(getApplicationContext(),
-                    "+7 points for " + mNamePlayer1,
-                    Toast.LENGTH_SHORT).show();
+            showToast(this.getString(R.string.stringPlus7) + mNamePlayer1);
+
         }
     }
 
@@ -395,9 +349,7 @@ public class MainActivity extends AppCompatActivity {
         displayFrameScorePlayer2(mFramePlayer2);
         activePlayer1.setVisibility(View.VISIBLE);
         activePlayer2.setVisibility(View.VISIBLE);
-        Toast.makeText(getApplicationContext(),
-                "New Game",
-                Toast.LENGTH_SHORT).show();
+        showToast(this.getString(R.string.stringNewGame));
     }
 
     /**
@@ -422,9 +374,7 @@ public class MainActivity extends AppCompatActivity {
         displayScorePlayer2(mScorePlayer2);
         activePlayer1.setVisibility(View.VISIBLE);
         activePlayer2.setVisibility(View.VISIBLE);
-        Toast.makeText(getApplicationContext(),
-                "New Frame",
-                Toast.LENGTH_SHORT).show();
+        showToast(this.getString(R.string.stringNewFrame));
     }
 
     /**
@@ -479,8 +429,16 @@ public class MainActivity extends AppCompatActivity {
                 displayScorePlayer1(mScorePlayer1);
             }
         }
+        showToast(this.getString(R.string.stringUndo));
+    }
+
+    /**
+     * Displays Toast message.
+     */
+
+    public void showToast(String strMessage) {
         Toast.makeText(getApplicationContext(),
-                "UNDO",
+                strMessage,
                 Toast.LENGTH_SHORT).show();
     }
 
