@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     String mNamePlayer1 = " Player 1";
     String mNamePlayer2 = " Player 2";
 
-
     /**
      * Views declared to avoid using findViewById every time.
      */
@@ -46,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextNamePlayer1;
     private EditText editTextNamePlayer2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Views declared to avoid using findViewById every time.
         activePlayer1 = (ImageView) findViewById(R.id.activePlayer1);
         activePlayer2 = (ImageView) findViewById(R.id.activePlayer2);
         textViewScorePlayer1 = (TextView) findViewById(R.id.textViewScorePlayer1);
@@ -61,49 +60,37 @@ public class MainActivity extends AppCompatActivity {
         editTextNamePlayer1 = (EditText) findViewById(R.id.editTextNamePlayer1);
         editTextNamePlayer2 = (EditText) findViewById(R.id.editTextNamePlayer2);
 
+        // Gets name of player 1 when the name is edited.
         editTextNamePlayer1.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void afterTextChanged(Editable s) {
-                // Add your code here
                 mNamePlayer1 = editTextNamePlayer1.getEditableText().toString();
             }
         });
 
+        // Gets name of player 2 when the name is edited.
         editTextNamePlayer2.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void afterTextChanged(Editable s) {
-                // Add your code here
                 mNamePlayer2 = editTextNamePlayer2.getEditableText().toString();
             }
         });
-
     }
 
-
     /**
-     * Alternates bow tie visibility and int player value (1 or 2).
+     * Alternates bow tie visibility and int player value (1 or 2) keeping track of player turns.
      */
     public void nextPlayer(View view) {
         if (mPlayer == 1) {
@@ -111,18 +98,17 @@ public class MainActivity extends AppCompatActivity {
             activePlayer2.setVisibility(View.VISIBLE);
             mPlayer = 2;
             showToast(mNamePlayer2 + (this.getString(R.string.stringTurn)));
-
         } else {
             activePlayer2.setVisibility(View.INVISIBLE);
             activePlayer1.setVisibility(View.VISIBLE);
             mPlayer = 1;
             showToast(mNamePlayer1 + (this.getString(R.string.stringTurn)));
         }
-
     }
 
     /**
-     * Adds 1 point to the current player and updates score counter display + textual feedback.
+     * Adds 1 point to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add1point(View view) {
         mBallType = 1;
@@ -141,7 +127,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 2 points to the current player and updates score counter display + textual feedback.
+     * Adds 2 points to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add2points(View view) {
         mBallType = 1;
@@ -160,7 +147,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 3 points to the current player and updates score counter display + textual feedback.
+     * Adds 3 points to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add3points(View view) {
         mBallType = 1;
@@ -179,7 +167,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 4 points to the current player and updates score counter display + textual feedback.
+     * Adds 4 points to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add4points(View view) {
         mBallType = 1;
@@ -198,7 +187,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 5 points to the current player and updates score counter display + textual feedback.
+     * Adds 5 points to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add5points(View view) {
         mBallType = 1;
@@ -217,7 +207,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 6 points to the current player and updates score counter display + textual feedback.
+     * Adds 6 points to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add6points(View view) {
         mBallType = 1;
@@ -236,7 +227,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 7 points to the current player and updates score counter display + textual feedback.
+     * Adds 7 points to the score of current player, updates score counter display and
+     * displays a toast message.
      */
     public void add7points(View view) {
         mBallType = 1;
@@ -255,7 +247,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 4 points to the adversary's score and updates score counter display + textual feedback.
+     * Adds 4 points to the opponent's score, updates score counter display and
+     * displays a toast message.
      */
     public void subtract4points(View view) {
         mBallType = 2;
@@ -274,7 +267,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 5 points to the adversary's score and updates score counter display + textual feedback.
+     * Adds 5 points to the opponent's score, updates score counter display and
+     * displays a toast message.
      */
     public void subtract5points(View view) {
         mBallType = 2;
@@ -293,7 +287,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 6 points to the adversary's score and updates score counter display + textual feedback.
+     * Adds 6 points to the opponent's score, updates score counter display and
+     * displays a toast message.
      */
     public void subtract6points(View view) {
         mBallType = 2;
@@ -312,7 +307,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adds 7 points to the adversary's score and updates score counter display + textual feedback.
+     * Adds 7 points to the opponent's score, updates score counter display and
+     * displays a toast message.
      */
     public void subtract7points(View view) {
         mBallType = 2;
@@ -327,12 +323,11 @@ public class MainActivity extends AppCompatActivity {
             mScorePlayer1 = mScorePlayer1 + 7;
             displayScorePlayer1(mScorePlayer1);
             showToast(this.getString(R.string.stringPlus7) + mNamePlayer1);
-
         }
     }
 
     /**
-     * Resets scores and frame scores for a new game + textual feedback.
+     * Resets scores, frame scores for a new game and displays a toast message.
      */
     public void newGame(View view) {
         mPlayer = 0;
@@ -353,7 +348,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Resets only scores and adds 1 point to the winner's frame counter + textual feedback.
+     * Resets only scores and adds 1 point to the winner's frame counter and displays
+     * a toast message.
      */
     public void newFrame(View view) {
         if (mScorePlayer1 < mScorePlayer2) {
@@ -406,7 +402,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Undo last score change + textual feedback.
+     * Undo last score change and displays a toast message.
      */
     public void undo(View view) {
         if (mPlayer == 1) {
@@ -435,11 +431,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays Toast message.
      */
-
     public void showToast(String strMessage) {
         Toast.makeText(getApplicationContext(),
                 strMessage,
                 Toast.LENGTH_SHORT).show();
     }
-
 }

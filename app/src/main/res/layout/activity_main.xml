@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- It is a snooker score counter app. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,13 +10,14 @@
     android:orientation="vertical"
     tools:context="com.example.android.snookerscorer.MainActivity">
 
+    <!-- Player names. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/breach16"
-
         android:orientation="horizontal">
 
+        <!--Player 1.-->
         <EditText
             android:id="@+id/editTextNamePlayer1"
             style="@style/stylePlayerNameOne"
@@ -24,6 +26,7 @@
             android:layout_weight="1"
             android:background="@drawable/score_counter_background" />
 
+        <!--Player 2.-->
         <EditText
             android:id="@+id/editTextNamePlayer2"
             style="@style/stylePlayerNameOne.Two"
@@ -31,16 +34,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/score_counter_background" />
-
-
     </LinearLayout>
 
+    <!--Score counters.-->
     <LinearLayout
         android:id="@+id/viewScores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <!--Score of player 1.-->
         <RelativeLayout
             style="@style/styleScoreViewPlayer1"
             android:layout_width="0dp"
@@ -48,6 +51,7 @@
             android:layout_weight="0.5"
             android:background="@drawable/score_counter_background">
 
+            <!--Gained points of player 1.-->
             <TextView
                 android:id="@+id/textViewScorePlayer1"
                 style="@style/styleScorePlayer1"
@@ -57,6 +61,7 @@
                 android:text="0"
                 android:textColor="@color/colorPlayer1" />
 
+            <!--Frames won by player 1.-->
             <TextView
                 android:id="@+id/textViewFrameScorePlayer1"
                 style="@style/styleFrameScorePlayer1"
@@ -65,9 +70,9 @@
                 android:layout_below="@id/textViewScorePlayer1"
                 android:layout_centerHorizontal="true"
                 android:text="(0)" />
-
         </RelativeLayout>
 
+        <!--Score of player 2.-->
         <RelativeLayout
             style="@style/styleScoreViewPlayer1.2"
             android:layout_width="0dp"
@@ -76,6 +81,7 @@
             android:background="@drawable/score_counter_background"
             android:orientation="vertical">
 
+            <!--Gained points of player 2.-->
             <TextView
                 android:id="@+id/textViewScorePlayer2"
                 style="@style/styleScorePlayer1.2"
@@ -85,6 +91,7 @@
                 android:text="0"
                 android:textColor="@color/colorPlayer2" />
 
+            <!--Frames won by player 2.-->
             <TextView
                 android:id="@+id/textViewFrameScorePlayer2"
                 style="@style/styleFrameScorePlayer1.2"
@@ -93,15 +100,16 @@
                 android:layout_below="@id/textViewScorePlayer2"
                 android:layout_centerHorizontal="true"
                 android:text="(0)" />
-
         </RelativeLayout>
     </LinearLayout>
 
+    <!--Player tracker: the bow tie shows whose turn is. "Next player" must be pressed first.-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/breach4">
 
+        <!--Player 1 is to play.-->
         <ImageView
             android:id="@+id/activePlayer1"
             android:layout_width="0dp"
@@ -110,6 +118,7 @@
             android:scaleType="fitCenter"
             android:src="@drawable/bowtieplayer1" />
 
+        <!--Player 2 is to play.-->
         <ImageView
             android:id="@+id/activePlayer2"
             android:layout_width="0dp"
@@ -117,9 +126,9 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:src="@drawable/bowtieplayer2" />
-
     </LinearLayout>
 
+    <!--Buttons-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -127,6 +136,7 @@
         android:background="@android:color/black"
         android:paddingTop="@dimen/breach8">
 
+        <!--NEXT PLAYER button, switches players.-->
         <Button
             android:id="@+id/buttonNextPlayer"
             style="@style/styleBigButton"
@@ -137,7 +147,7 @@
             android:onClick="nextPlayer"
             android:text="@string/stringNextPlayer" />
 
-
+        <!--Score buttons +1 through +7.-->
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/groupViewPointButtons"
             android:layout_width="match_parent"
@@ -150,6 +160,7 @@
             app:flexWrap="wrap"
             app:justifyContent="center">
 
+            <!--BUTTON +1: adds 1 point to the actual player's score.-->
             <Button
                 android:id="@+id/button1Point"
                 style="@style/stylePointButtons"
@@ -157,6 +168,7 @@
                 android:onClick="add1point"
                 android:text="+1" />
 
+            <!--BUTTON +2: adds 2 points to the actual player's score.-->
             <Button
                 android:id="@+id/button2Points"
                 style="@style/stylePointButtons"
@@ -164,6 +176,7 @@
                 android:onClick="add2points"
                 android:text="+2" />
 
+            <!--BUTTON +3: adds 3 points to the actual player's score.-->
             <Button
                 android:id="@+id/button3Points"
                 style="@style/stylePointButtons"
@@ -171,6 +184,7 @@
                 android:onClick="add3points"
                 android:text="+3" />
 
+            <!--BUTTON +4: adds 4 points to the actual player's score.-->
             <Button
                 android:id="@+id/button4Points"
                 style="@style/stylePointButtons"
@@ -178,7 +192,7 @@
                 android:onClick="add4points"
                 android:text="+4" />
 
-
+            <!--BUTTON +5: adds 5 points to the actual player's score.-->
             <Button
                 android:id="@+id/button5Points"
                 style="@style/stylePointButtons"
@@ -186,6 +200,7 @@
                 android:onClick="add5points"
                 android:text="+5" />
 
+            <!--BUTTON +6: adds 6 points to the actual player's score.-->
             <Button
                 android:id="@+id/button6Points"
                 style="@style/stylePointButtons"
@@ -193,15 +208,16 @@
                 android:onClick="add6points"
                 android:text="+6" />
 
+            <!--BUTTON +7: adds 7 points to the actual player's score.-->
             <Button
                 android:id="@+id/button7Points"
                 style="@style/stylePointButtons"
                 android:background="@drawable/button_selector_black"
                 android:onClick="add7points"
                 android:text="+7" />
-
         </com.google.android.flexbox.FlexboxLayout>
 
+        <!--Foul score buttons.-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -212,6 +228,7 @@
             android:layout_marginTop="@dimen/breach4"
             android:gravity="center_horizontal">
 
+            <!--BUTTON -4: adds 4 points to the opponent's score.-->
             <Button
                 android:id="@+id/buttonFoul4Points"
                 style="@style/stylePointButtons"
@@ -219,6 +236,7 @@
                 android:onClick="subtract4points"
                 android:text="-4" />
 
+            <!--BUTTON -5: adds 5 points to the opponent's score.-->
             <Button
                 android:id="@+id/buttonFoul5Points"
                 style="@style/stylePointButtons"
@@ -227,6 +245,7 @@
                 android:onClick="subtract5points"
                 android:text="-5" />
 
+            <!--BUTTON -6: adds 6 points to the opponent's score.-->
             <Button
                 android:id="@+id/buttonFoul6Points"
                 style="@style/stylePointButtons"
@@ -235,6 +254,7 @@
                 android:onClick="subtract6points"
                 android:text="-6" />
 
+            <!--BUTTON -7: adds 7 points to the opponent's score.-->
             <Button
                 android:id="@+id/buttonFoul7Points"
                 style="@style/stylePointButtons"
@@ -242,9 +262,9 @@
                 android:background="@drawable/button_selector_black"
                 android:onClick="subtract7points"
                 android:text="-7" />
-
         </RelativeLayout>
 
+        <!--Buttons at the bottom.-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -252,6 +272,7 @@
             android:layout_marginLeft="@dimen/breach16"
             android:layout_marginRight="@dimen/breach16">
 
+            <!--NEW FRAME BUTTON: resets scores, increases winner's frame score by one.-->
             <Button
                 android:id="@+id/buttonNewFrame"
                 style="@style/styleMenuButtons"
@@ -262,6 +283,7 @@
                 android:onClick="newFrame"
                 android:text="@string/stringNewFrame" />
 
+            <!--NEW GAME BUTTON: resets score and frame counters.-->
             <Button
                 android:id="@+id/buttonNewGame"
                 style="@style/styleMenuButtons"
@@ -272,6 +294,7 @@
                 android:onClick="newGame"
                 android:text="@string/stringNewGame" />
 
+            <!--UNDO BUTTON: sets the score one step back.-->
             <Button
                 android:id="@+id/buttonUndo"
                 style="@style/styleMenuButtons"
@@ -282,7 +305,5 @@
                 android:onClick="undo"
                 android:text="@string/stringUndo" />
         </LinearLayout>
-
     </RelativeLayout>
-
 </LinearLayout>
